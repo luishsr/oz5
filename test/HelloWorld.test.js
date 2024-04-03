@@ -11,7 +11,7 @@ describe("HelloWorld", function () {
     // Deploy the HelloWorld contract
     const HelloWorld = await ethers.getContractFactory("HelloWorld");
     helloWorld = await upgrades.deployProxy(HelloWorld, ["Hello, Hardhat!"], { initializer: 'initialize' });
-    await helloWorld.deployed();
+    //await helloWorld.deployed();
   });
 
   it("Should return the initial greeting", async function () {
